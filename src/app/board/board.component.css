@@ -1,0 +1,26 @@
+.board {
+  border: 0.5em solid black;
+  background: yellowgreen;
+  width: 61rem;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60rem;
+  height: 60rem;
+}
+
+.tile {
+  flex: 1 0 6rem;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 6rem;
+  height: 6rem;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.nonWalkableTile {
+  background: dodgerblue;
+}
