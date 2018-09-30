@@ -2,7 +2,7 @@
   <div class="col-md-12">
     Drag pieces from here to the board to position them:
     <div class="pieces">
-      <div *ngFor="let piece of pieces" class="piece">
+      <div *ngFor="let piece of pieces" draggable class="piece">
         <img [src]='piece.imageSourcePath()' alt="Image of {{piece.name}}" class="pieceImage"/>
         <p>{{piece.name}}</p>
       </div>

@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BoardComponent } from './board/board.component';
-import { PiecesComponent } from './pieces/pieces.component';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {BoardComponent} from './board/board.component';
+import {PiecesComponent} from './pieces/pieces.component';
+import {NgDragDropModule} from 'ng-drag-drop';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,11 @@ import { PiecesComponent } from './pieces/pieces.component';
     PiecesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgDragDropModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
