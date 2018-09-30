@@ -1,4 +1,22 @@
 .pieces {
   border: 1px solid gray;
   min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.piece {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5em;
+  border: 1px solid black;
+  font-size: smaller;
+}
+
+/* @todo use vector images http://vector.gissen.nl/stratego.html */
+.pieceImage {
+  height: 80%;
+}
+
