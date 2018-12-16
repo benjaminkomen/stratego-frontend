@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
   <div class="board">
     <div class="tiles">
-      <div *ngFor="let tile of tiles" [class]="tile.walkable ? 'tile' : 'tile nonWalkableTile'" droppable>
+      <div *ngFor="let tile of tiles" [class]="tile.walkable ? 'tile' : 'tile nonWalkableTile'">
         <p class="card-text">{{tile.toString()}}</p>
       </div>
     </div>
