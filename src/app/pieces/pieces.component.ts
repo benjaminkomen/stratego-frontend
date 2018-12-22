@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Piece} from '../shared/piece.model';
 import {PieceStatus} from '../shared/piece-status.enum';
 import {PieceName} from '../shared/piece-name.enum';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-pieces',
@@ -11,6 +12,7 @@ import {PieceName} from '../shared/piece-name.enum';
 export class PiecesComponent implements OnInit {
 
   pieces: Piece[] = [];
+  tilesList: any;
 
   constructor() {
   }
@@ -62,5 +64,14 @@ export class PiecesComponent implements OnInit {
       new Piece(0, 11, PieceName.Bomb, PieceStatus.Levend, false, false),
       new Piece(0, 11, PieceName.Bomb, PieceStatus.Levend, false, false)
     );
+  }
+
+  drop(event: CdkDragDrop<any>) {
+    if (event.container.id === event.previousContainer.id) {
+      // move inside same list
+      moveItemInArray(this.pieces, event.previousIndex, event.currentIndex);
+    } else {
+      // move between lists
+    }
   }
 }

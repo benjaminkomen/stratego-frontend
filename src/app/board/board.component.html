@@ -1,6 +1,12 @@
 <div class="row justify-content-center">
   <div class="board">
-    <div class="tiles">
+    <div
+      cdkDropList
+      id="tilesList"
+      [cdkDropListData]="tiles"
+      cdkDropListConnectedTo="piecesList"
+      (cdkDropListDropped)="drop($event)"
+      class="tiles">
       <div *ngFor="let tile of tiles" [class]="tile.walkable ? 'tile' : 'tile nonWalkableTile'">
         <p class="card-text">{{tile.toString()}}</p>
       </div>

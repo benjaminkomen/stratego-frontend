@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Tile} from '../shared/tile.model';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-board',
@@ -48,6 +49,15 @@ export class BoardComponent implements OnInit {
       return new Tile(x, y, false);
     } else {
       return new Tile(x, y, true);
+    }
+  }
+
+  drop(event: CdkDragDrop<any>) {
+    if (event.container.id === event.previousContainer.id) {
+      // move inside same list
+      moveItemInArray(this.tiles, event.previousIndex, event.currentIndex);
+    } else {
+      // move between lists
     }
   }
 }

@@ -1,7 +1,13 @@
 <div class="row mb-4">
   <div class="col-md-12">
     Drag pieces from here to the board to position them:
-    <div class="pieces">
+    <div
+      cdkDropList
+      id="piecesList"
+      [cdkDropListData]="pieces"
+      cdkDropListConnectedTo="tilesList"
+      (cdkDropListDropped)="drop($event)"
+      class="pieces">
       <div *ngFor="let piece of pieces" cdkDrag class="piece">
         <img [src]='piece.imageSourcePath()' alt="Image of {{piece.name}}" class="pieceImage"/>
         <p>{{piece.name}}</p>
