@@ -24,7 +24,7 @@
     "@angular/platform-server": "^7.2.4",
     "@angular/router": "^7.2.4",
     "bootstrap": "^4.4.1",
-    "core-js": "^2.6.5",
+    "core-js": "^3.6.4",
     "jquery": "^3.4.1",
     "ng-drag-drop": "^5.0.0",
     "popper.js": "^1.16.1",
